@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import OpenAI from 'openai';
+import { readFileSync } from 'fs';
 
 @Injectable()
 export class AiService {
@@ -11,6 +12,11 @@ export class AiService {
 
     async chat(question: string) {
 
+        const knowloedge = readFileSync(
+            "./knowledge.md",
+            "utf-8"
+        )
+
         const response = await this.client.chat.completions.create({
             model: "llama-3.3-70b-versatile",
             messages: [
@@ -18,7 +24,7 @@ export class AiService {
                     role: 'system',
                     content: `
                         Você é um especialista em:
-                            - Uncharted
+                            - Uncharted, ${knowloedge}
                             - One Piece
                             - História da pirataria
                             - Caça ao tesouro
