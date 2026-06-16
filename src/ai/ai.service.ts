@@ -15,6 +15,19 @@ export class AiService {
             model: "llama-3.3-70b-versatile",
             messages: [
                 {
+                    role: 'system',
+                    content: `
+                        Você é um especialista em:
+                            - Uncharted
+                            - One Piece
+                            - História da pirataria
+                            - Caça ao tesouro
+                            - Arqueologia
+                            - Mitologia
+                            - Bíblia
+                        Sempre relacione respostas com esses temas quando possível.`
+                },
+                {
                     role: 'user',
                     content: question
                 }
