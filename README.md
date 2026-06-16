@@ -164,12 +164,12 @@ const response = await client.chat.completions.create({
 
 # 🔮 Próximos passos
 
+* [ ] RAG
+* [ ] Vector Database
 * [ ] Streaming de respostas
 * [ ] Histórico de conversas
 * [ ] Memória persistente
 * [ ] Function Calling
-* [ ] RAG
-* [ ] Vector Database
 * [ ] Agents
 * [ ] Upload de documentos
 * [ ] Suporte a múltiplos provedores
