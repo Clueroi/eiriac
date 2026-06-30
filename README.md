@@ -1,4 +1,4 @@
-# 🤖 Nest AI Chat API
+# 🤖 ERIAC
 
 🚀 API de Inteligência Artificial desenvolvida com **NestJS**, utilizando uma arquitetura limpa e preparada para integração com múltiplos modelos de LLM.
 
